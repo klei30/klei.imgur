@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+$base-bg-color: #0e0d0e;
+$base-color2: #1a1919;
+
+img {
+  @apply max-w-full h-auto align-middle inline-block;
+}
+
+.test {
+  color: black;
+}
+
+.hide-sr {
+  display: none;
+}
+
+.data-badge[data-count]::after {
+  content: attr(data-count);
+  @apply relative -top-8 -right-5 text-base;
+}
+
+.full-vh {
+  @apply min-h-screen;
+}
+
+.scroll-hidden {
+  scrollbar-width: none;
+
+  ::-webkit-scrollbar {
+    @apply h-0 bg-transparent;
+  }
+}

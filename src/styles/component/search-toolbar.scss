@@ -1,0 +1,18 @@
+.search-toolbar {
+  @apply max-w-screen-2xl
+  mx-auto
+  mt-6
+  flex
+  flex-row
+  gap-1
+  md:justify-end;
+
+  &__dropdown {
+    @apply w-full
+    md:w-40
+    border-solid
+    border-gray-200
+    border-2
+    p-2;
+  }
+}

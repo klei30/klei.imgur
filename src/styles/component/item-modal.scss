@@ -1,0 +1,132 @@
+/*! purgecss start ignore */
+
+/* stylelint-disable selector-class-pattern */
+.ReactModal__Body--open {
+  @apply overflow-hidden
+  pr-3;
+}
+
+.ReactModal__Overlay--after-open.myModal__Overlay {
+  @apply h-full
+  transition-all
+  duration-500
+  opacity-100;
+}
+
+.myModal__Content {
+  @apply md:w-11/12
+  md:mx-auto
+  p-4
+  overflow-y-scroll
+  h-full
+  bg-white;
+}
+
+.myModal__Overlay {
+  @apply bg-black
+  bg-opacity-95
+  fixed
+  top-0
+  mx-auto
+  w-full
+  opacity-0
+  transition-all
+  duration-500;
+
+  .card {
+    @apply h-full
+    mx-auto
+    bg-gray-50
+    block
+    w-11/12;
+
+    img {
+      @apply mt-4;
+    }
+  }
+
+  .card-info {
+    grid-template-rows: 1fr 2fr;
+
+    &__icons {
+      @apply mx-auto
+      gap-x-16;
+    }
+  }
+}
+/* stylelint-enable selector-class-pattern */
+
+.comment-thumbs {
+  @apply flex
+  justify-end
+  gap-2
+  mt-4;
+}
+
+.item-modal {
+  @apply flex
+  flex-col
+  gap-6
+  mb-4;
+
+  &__image {
+    @apply flex
+    justify-center;
+
+    img {
+      @apply max-h-96
+      w-auto;
+    }
+  }
+
+  &__title {
+    @apply text-2xl
+    text-center;
+  }
+
+  &--button {
+    &__close {
+      @apply p-1 bg-gray-100 border border-gray-300 w-16 h-16 self-end;
+    }
+  }
+}
+
+.modal-comment {
+  @apply antialiased
+  max-w-full
+  break-all;
+
+  &__text {
+    @apply text-sm;
+  }
+
+  &__title {
+    @apply mb-4
+    text-lg
+    font-semibold
+    text-gray-900;
+  }
+
+  &__nested {
+    @apply border
+    flex-1
+    leading-relaxed
+    my-2
+    px-4
+    py-2
+    rounded-lg
+    sm:px-6
+    sm:py-4;
+
+    div:nth-child(2) {
+      @apply bg-gray-100;
+    }
+  }
+
+  &__datetime {
+    @apply text-xs
+    text-gray-400;
+  }
+}
+
+/*! purgecss end ignore */

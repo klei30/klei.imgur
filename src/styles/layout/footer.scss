@@ -1,0 +1,89 @@
+.footer {
+  background-color: $base-color2;
+  @apply mt-12
+  text-white;
+
+  &__content {
+    @apply flex-col
+    flex-wrap
+    flex
+    lg:items-start
+    md:flex-nowrap
+    md:flex-row
+    md:items-center
+    mx-auto
+    py-24;
+
+    &__sections {
+      @apply -mb-10
+      flex-grow
+      flex-wrap
+      flex
+      md:pr-20
+      order-first;
+    }
+
+    &__right {
+      @apply w-64
+      flex-shrink-0
+      md:mx-0
+      mx-auto
+      text-center
+      md:text-left
+      md:mt-0
+      mt-10;
+
+      &__link {
+        @apply flex
+        font-medium
+        items-center
+        md:justify-start;
+      }
+    }
+  }
+
+  &__bottom {
+    @apply bg-gray-100
+    text-black;
+
+    &__container {
+      @apply mx-auto
+      py-4
+      px-5
+      flex
+      flex-wrap
+      flex-col
+      sm:flex-row;
+    }
+
+    &__left {
+      @apply text-sm
+      text-center
+      sm:text-left;
+    }
+
+    &__center {
+      @apply inline-flex
+      sm:ml-auto
+      sm:mt-0
+      mt-2
+      justify-center
+      sm:justify-start;
+    }
+  }
+}
+
+.footer-section {
+  @apply text-center
+  md:text-justify
+  w-2/4
+  lg:w-1/4
+  px-4;
+
+  &__title {
+    @apply font-medium
+    tracking-widest
+    text-lg
+    mb-3;
+  }
+}

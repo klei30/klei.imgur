@@ -1,0 +1,107 @@
+@use "sass:color";
+
+.header {
+  background-color: $base-color2;
+
+  &__top {
+    @apply grid
+    content-center
+    transition-all
+    max-w-screen-2xl
+    mx-auto
+    px-2
+    lg:px-0
+    duration-500
+    h-48;
+
+    @include breakpoint($from: "md") {
+      grid-template-columns: 1fr 4fr 1fr;
+    }
+
+    @include breakpoint($from: "lg") {
+      grid-template-columns: 1fr 2fr 1fr;
+    }
+  }
+
+  &__logo,
+  &__profile {
+    /* stylelint-disable scss/no-global-function-names */
+    img {
+      filter: invert(100%);
+    }
+    /* stylelint-enable scss/no-global-function-names */
+  }
+
+  &__logo {
+    @apply w-full
+    text-3xl
+    justify-center
+    items-end
+    md:justify-start
+    font-sans
+    gap-x-2
+    flex
+    flex-wrap
+    text-white;
+
+    @include breakpoint($until: "md") {
+      @apply mb-4;
+    }
+  }
+
+  &__profile {
+    @apply justify-self-end;
+
+    @include breakpoint($until: "md") {
+      @apply hidden;
+    }
+  }
+
+  &__tags {
+    @apply bg-gray-900
+    py-4;
+
+    &__container {
+      @apply flex-col
+      flex
+      items-center
+      md:items-baseline
+      max-w-screen-2xl
+      mx-auto
+      px-2
+      lg:px-0
+      text-white
+      w-full;
+    }
+
+    &__title {
+      @apply text-3xl;
+    }
+
+    &__items {
+      @apply gap-1
+      grid-cols-4
+      grid
+      md:grid-cols-5
+      lg:grid-cols-10
+      p-2;
+    }
+
+    a {
+      @apply p-2
+      bg-gray-800
+      duration-500
+      transition-colors
+      flex
+      flex-col
+      justify-between
+      break-words;
+    }
+
+    @media (hover: hover) {
+      a:hover {
+        @apply bg-yellow-300 text-black;
+      }
+    }
+  }
+}
