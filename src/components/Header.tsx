@@ -37,7 +37,7 @@ function Header(): JSX.Element {
 
   const logo = (
     <a href="/" className="header__logo">
-      <img src={imgurLogo} alt="Logo" width="100" height="35" style={{ position: 'relative', marginLeft: '40px' }}/>
+     <img src={imgurLogo} alt="Logo" width="100" height="35" style={{ marginLeft: '40px', position: 'relative' }}/>
       <span>Techaway</span>
     </a>
   );
